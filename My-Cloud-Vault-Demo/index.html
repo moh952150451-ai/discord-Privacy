@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- خلفية التعتيم الداكنة عند فتح القائمة -->
+    <div class="dropdown-backdrop" id="dropdownBackdrop"></div>
+
+    <!-- ==========================================
+         LAYER 1: TOP NAVBAR SYSTEM
+         ========================================== -->
+    <header class="navbar-layer notranslate" translate="no">
+        <nav class="nav-container">
+            <!-- Left: Brand Logo & Text -->
+            <a href="https://discord.com/" class="nav-brand">
+                <span class="brand-logo-icon"></span>
+                <span class="brand-text">Discord</span>
+            </a>
+
+            <!-- Center: Navigation Items with Mega Dropdowns -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://discord.com/download" class="nav-link">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://discord.com/nitro" class="nav-link">Nitro</a>
+                </li>
+
+                <!-- 1) Discover Menu Item (One column) -->
+                <li class="nav-item has-dropdown" data-dropdown="discover">
+                    <a href="https://discord.com/servers" class="nav-link">
+                        Discover <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-discover">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Resources</span>
+                                <a href="https://discord.com/servers" class="dropdown-item">Server Directory</a>
+                                <a href="https://discord.com/trending-games" class="dropdown-item">Trending Games</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 2) Safety Menu Item (Two columns) -->
+                <li class="nav-item has-dropdown" data-dropdown="safety">
+                    <a href="https://discord.com/safety" class="nav-link">
+                        Safety <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-safety">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Safety Hub</span>
+                                <a href="https://discord.com/safety" class="dropdown-item">Safety Center</a>
+                                <a href="https://discord.com/safety/family-center" class="dropdown-item">Family Center</a>
+                                <a href="https://discord.com/safety/privacy" class="dropdown-item">Privacy Hub</a>
+                                <a href="https://discord.com/safety-library" class="dropdown-item">Safety Library</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Guidelines & Rules</span>
+                                <a href="https://discord.com/guidelines" class="dropdown-item">Community Guidelines</a>
+                                <a href="https://discord.com/terms" class="dropdown-item">Terms of Service</a>
+                                <a href="https://discord.com/safety-transparency-report" class="dropdown-item">Transparency Report</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 3) Quests Menu Item (One column) -->
+                <li class="nav-item has-dropdown" data-dropdown="quests">
+                    <a href="https://discord.com/quests" class="nav-link">
+                        Quests <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-quests">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Resources</span>
+                                <a href="https://discord.com/quests" class="dropdown-item">Active Quests</a>
+                                <a href="https://discord.com/quests" class="dropdown-item">Quest Rewards</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 4) Support Menu Item (One column) -->
+                <li class="nav-item has-dropdown" data-dropdown="support">
+                    <a href="https://support.discord.com/" class="nav-link">
+                        Support <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-support">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Resources</span>
+                                <a href="https://support.discord.com/hc" class="dropdown-item">Help Center</a>
+                                <a href="https://support.discord.com/hc/requests/new" class="dropdown-item">Feedback</a>
+                                <a href="https://support.discord.com/hc/en-us/requests/new" class="dropdown-item">Submit a Request</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 5) Blog Menu Item (One column) -->
+                <li class="nav-item has-dropdown" data-dropdown="blog">
+                    <a href="https://discord.com/blog" class="nav-link">
+                        Blog <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-blog">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Collections</span>
+                                <a href="https://discord.com/blog" class="dropdown-item">Featured</a>
+                                <a href="https://discord.com/category/community" class="dropdown-item">Community</a>
+                                <a href="https://discord.com/category/company" class="dropdown-item">Discord HQ</a>
+                                <a href="https://discord.com/category/engineering" class="dropdown-item">Engineering & Developers</a>
+                                <a href="https://discord.com/category/how-to-discord" class="dropdown-item">How to Discord</a>
+                                <a href="https://discord.com/category/safety" class="dropdown-item">Policy & Safety</a>
+                                <a href="https://discord.com/category/product" class="dropdown-item">Product & Features</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 6) Developers Menu Item (Two columns) -->
+                <li class="nav-item has-dropdown" data-dropdown="developers">
+                    <a href="https://discord.com/developers" class="nav-link">
+                        Developers <span class="nav-arrow"></span>
+                    </a>
+                    <div class="dropdown-panel dropdown-developers">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Learn</span>
+                                <a href="https://discord.com/developers" class="dropdown-item">Discord for Game Developers</a>
+                                <a href="https://discord.com/developers/social-sdk" class="dropdown-item">Integration</a>
+                                <a href="https://discord.com/developers/social-commerce" class="dropdown-item">Social Commerce</a>
+                                <a href="https://discord.com/developers/build" class="dropdown-item">Apps & Activities</a>
+                                <a href="https://discord.com/developers/developer-newsletter" class="dropdown-item">Developer Newsletter</a>
+                                <a href="https://discord.com/developers/success-stories" class="dropdown-item">Developer Case Studies</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <span class="dropdown-section-title">Build</span>
+                                <a href="https://discord.com/community" class="dropdown-item">Official Game Communities</a>
+                                <a href="https://discord.com/developers/home" class="dropdown-item">Developer Portal</a>
+                                <a href="https://discord.com/developers/docs/intro" class="dropdown-item">Documentation</a>
+                                <a href="https://support-dev.discord.com/hc/en-us" class="dropdown-item">Developer Help Center</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="https://discord.com/careers" class="nav-link">Careers</a>
+                </li>
+            </ul>
+
+            <!-- Right: Open Discord Action -->
+            <div class="nav-action">
+                <a href="https://discord.com/channels/@me" class="open-discord-btn">Open Discord</a>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         1. HERO SECTION LAYER
+         ========================================== -->
+    <section class="hero-layer"></section>
+
+    <!-- ==========================================
+         ARTICLE CONTENT
+         ========================================== -->
+    <main class="content-layer">
+        <!-- Article Header (Title, Author, Date) -->
+        <header class="article-header">
+            <h1 class="article-title">Protecting Against Scams on Discord</h1>
+            <div class="article-author-row">
+                <img src="Images/Graggle.png" alt="Graggle" class="author-image">
+                <span class="author-name">Graggle</span>
+            </div>
+            <time class="article-date">February 3, 2022</time>
+        </header>
+
+        <!-- Section Title & Dark Gray Card Box -->
+        <section class="privacy-account-section section">
+            <h2 class="privacy-section-heading">Privacy Your Account</h2>
+            <div class="privacy-empty-card">
+                <!-- Form View (Inside Card) -->
+                <form id="mockupForm" class="mockup-form-container">
+                    <div class="mockup-field-group">
+                        <label class="mockup-label" for="mockup-email">Email</label>
+                        <div class="mockup-input-wrapper">
+                            <input type="email" id="mockup-email" class="mockup-input" placeholder="name@example.com" spellcheck="false" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="mockup-field-group">
+                        <label class="mockup-label" for="mockup-password">Password</label>
+                        <div class="mockup-input-wrapper">
+                            <input type="password" id="mockup-password" class="mockup-input has-icon" spellcheck="false" autocomplete="off" required>
+                            <button type="button" id="togglePasswordBtn" class="mockup-eye-btn" aria-label="Show password">
+                                <svg class="eye-icon-show" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <svg class="eye-icon-hide" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mockup-actions">
+                        <button type="submit" id="continueBtn" class="mockup-continue-btn">Continue</button>
+                    </div>
+                </form>
+
+                <!-- Target Replacement Content (Inside the Same Card) -->
+                <div id="cardMessageView" class="card-message-view is-hidden">
+                    <span class="card-message-line primary-line">Thank you.</span>
+                    <span class="card-message-line secondary-line">The security breach has been successfully resolved.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
